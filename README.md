@@ -1,26 +1,27 @@
-# PyResolve 🧩
+# DepWeaver 🧩
 
-PyResolve is an intelligent Python dependency resolver designed to tackle the complex compatibility challenges of data science and machine learning environments.
+DepWeaver is an intelligent Python dependency resolver designed to tackle the complex compatibility challenges of data science and machine learning environments.
 
 It navigates "dependency hell" by analyzing the entire dependency graph for your project, including nested and conditional dependencies, and uses a backtracking algorithm to find a set of package versions that are guaranteed to be compatible with each other.
 
+[https://pypi.org/project/depweaver/](https://pypi.org/project/depweaver/)
+
 ---
 
-### ## The Problem
+### The Problem
 
 Ever seen errors like these?
 * `ModuleNotFoundError: No module named 'requests'`
 * `InvalidVersion: Invalid version`
 * A long traceback caused by conflicting versions of `numpy`.
 
-These issues arise when different packages in your project require incompatible versions of the same underlying library. PyResolve is built to solve this problem automatically.
+These issues arise when different packages in your project require incompatible versions of the same underlying library. DepWeaver is built to solve this problem automatically.
 
 ---
 
-### ## How to Use
+### How to Use
 
 1.  **Create a `target.txt` file** in your project's root directory. List the high-level packages you want to use, one per line.
-
     ```text
     # target.txt
 
@@ -30,21 +31,19 @@ These issues arise when different packages in your project require incompatible 
     matplotlib
     ```
 
-2.  **Run PyResolve.** From your terminal, simply run the `pyresolve` command.
-
+2.  **Run DepWeaver.** From your terminal, simply run the `depweaver` command.
     ```bash
-    pyresolve
+    depweaver
     ```
 
-3.  **Get Your Results.** PyResolve will do the hard work and generate a complete, stable `requirements.txt` file for you. You can then install it with confidence.
-
+3.  **Get Your Results.** DepWeaver will do the hard work and generate a complete, stable `requirements.txt` file for you. You can then install it with confidence.
     ```bash
     pip install -r requirements.txt
     ```
 
 ---
 
-### ## Features
+### Features
 
 * **Deep Graph Traversal:** Explores the entire dependency tree, not just top-level requirements.
 * **Intelligent Conflict Resolution:** Uses a backtracking solver to find a working set of versions, even with complex conflicts.
